@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "json-server": "^0.17.3",
+    "json-server-auth": "^2.1.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "bin": "./server.js",
+  "name": "json-server-upload",
+  "version": "1.0.0",
+  "description": "Módulo que tem como principal função possibilitar o upload de arquivos em uma fake REST API, ótimo para mockar um backend simples. Utiliza o json-server como base para criar uma fake REST API, um middleware de autenticação json-server-auth",
+  "main": "server.js",
+  "devDependencies": {},
+  "keywords": [
+    "upload",
+    "json",
+    "json-server",
+    "json-server-auth",
+    "mock",
+    "fake",
+    "REST",
+    "API",
+    "fake",
+    "api",
+    "backend"
+  ],
+  "author": "t_nascimento",
+  "license": "MIT"
+}
