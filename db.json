@@ -1,5 +1,107 @@
 {
-    "users": [
-        
-    ]
+  "users": [
+    {
+      "email": "odirlei@email.com",
+      "password": "$2a$10$5DTwmNzscGj1QHFbUOkhLewXjHodiZpuy7VauD28pwfLtibFH2tkq",
+      "nome": "Odirlei Assis",
+      "cep": "65092-055",
+      "logradouro": "Rua São José",
+      "numero": "200",
+      "bairro": "Itapera",
+      "uf": "MA",
+      "cidade": "São Luís",
+      "hardSkills": [
+        "CSS",
+        "HTML",
+        "JAVA"
+      ],
+      "user_img": "1692210839596.jpeg",
+      "id": 1
+    },
+    {
+      "email": "alexia@email.com",
+      "password": "$2a$10$UFAOIRjA7pcxjf3Zdo99renopnDER1Arg9DHK5sqW4mhDZ2RidAqK",
+      "nome": "Aléxia Vitória",
+      "cep": "65092-055",
+      "logradouro": "Rua São José",
+      "numero": "200",
+      "bairro": "Itapera",
+      "uf": "MA",
+      "cidade": "São Luís",
+      "hardSkills": [
+        "CSS",
+        "HTML",
+        "JAVA"
+      ],
+      "user_img": "1692210998533.jpg",
+      "id": 2
+    },
+    {
+      "email": "jessica@email.com",
+      "password": "$2a$10$5wdy55DnqvdZk8iCeSYC4.L0IC1cqy54WWb1U//8o2ktsjTSY7HLq",
+      "nome": "Jéssica Franzon",
+      "cep": "65092-055",
+      "logradouro": "Rua São José",
+      "numero": "200",
+      "bairro": "Itapera",
+      "uf": "MA",
+      "cidade": "São Luís",
+      "hardSkills": [
+        "CSS",
+        "HTML",
+        "JAVA"
+      ],
+      "user_img": "1692211055667.png",
+      "id": 3
+    },
+    {
+      "email": "thiago@email.com",
+      "password": "$2a$10$bYGrcjlo9oKdGyEhhF04A.RAudDYPIpDbVrV4ZHBebMj52AWAcZAK",
+      "nome": "Thiago Nascimento",
+      "cep": "65092-055",
+      "logradouro": "Rua São José",
+      "numero": "200",
+      "bairro": "Itapera",
+      "uf": "MA",
+      "cidade": "São Luís",
+      "hardSkills": [
+        "CSS",
+        "HTML",
+        "JAVA"
+      ],
+      "user_img": "1692211091725.jpeg",
+      "id": 4
+    }
+  ],
+  "servicos": [
+    {
+      "nome": "Desenvolvimento de site institucional - Gateway de Pagamento / Fintech",
+      "valor": "1300,00",
+      "descricao": "Desenvolver um site responsivo que seja utilizado como uma plataforma de apresentação do nosso gateway de pagamento. O objetivo principal deste projeto é criar um site atraente e informativo, que demonstre as funcionalidades e benefícios do nosso gateway de pagamento para potenciais clientes.",
+      "techs": [
+        "HTML",
+        "CSS",
+        "JS"
+      ],
+      "id": 1
+    },
+    {
+      "nome": "Bot telegram Pagamento",
+      "valor": "2400,00",
+      "descricao": "Preciso fazer um código em python para um bot do telegram. O bot será para solicitação de pagamento.",
+      "techs": [
+        "PYTHON"
+      ],
+      "id": 2
+    },
+    {
+      "nome": "Caixa Rápido",
+      "valor": "1200,00",
+      "descricao": "Preciso fazer um  software que permita ao usuário fazer o upload de seu extrato bancário em formato( ofx). Dentro do software o mesmo poderá categorizar todas as suas receitas e despesas, tendo categorias sugeridas pelo software e permitindo também personalizações. Após o lançamento de vários extratos o software irá entender que são lançamentos parecidos e fará a categorização de maneira automática, cabendo ao usuário somente categorizar as receitas e despesas que não se repetem. Após a categorização o software irá emitir gráficos e relatórios baseados na categorização das contas.",
+      "techs": [
+        "PYTHON"
+      ],
+      "id": 3
+    }
+  ]
 }

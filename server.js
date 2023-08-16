@@ -53,5 +53,8 @@ server.db = router.db
 server.use(router)
 
 server.listen(port, () => {
-    console.log("JSON Server executando na porta: " + port)
+    console.log("\x1b[36m%s\x1b[0m", "JSON Server executando na porta: " + port)
+    console.log("\x1b[1m%s\x1b[0m", "\nRecursos disponíveis: ")
+    console.log("\nhttp://localhost:3000/users")
+    console.log("http://localhost:3000/servicos\n")
 })
