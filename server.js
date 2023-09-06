@@ -54,7 +54,10 @@ server.use(router)
 
 server.listen(port, () => {
     console.log("\x1b[36m%s\x1b[0m", "JSON Server executando na porta: " + port)
-    console.log("\x1b[1m%s\x1b[0m", "\nRecursos disponíveis: ")
-    console.log("\nhttp://localhost:3000/users")
-    console.log("http://localhost:3000/servicos\n")
+    console.log("\x1b[1m%s\x1b[0m", "\nRecursos disponíveis: \n")
+
+    Object.keys(router.db.__wrapped__).forEach( recurso => console.log(`http://localhost:${port}/${recurso}`) )
+
+    console.log(`\nhttp://localhost:${port}/static`);
+
 })
