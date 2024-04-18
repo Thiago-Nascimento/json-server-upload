@@ -39,6 +39,8 @@ server.use(middlewares)
 
 server.use(upload.any())
 
+
+
 server.use((req, res, next) => {
     if (req.originalUrl === "/users") {
         req.body = {...req.body, user_img: imagem}
@@ -48,6 +50,29 @@ server.use((req, res, next) => {
 })
 
 server.use(auth)
+
+server.put("/users/:id", (req, res, next) => {
+    // Aqui você pode tratar a requisição PUT para atualizar os dados do usuário,
+    // incluindo a imagem, se necessário.
+    const id = parseInt(req.params.id);
+    const user = router.db.get("users").find({ id }).value();
+
+    if (!user) {
+        return res.status(404).send("Usuário não encontrado");
+    }
+
+    // Atualize os campos do usuário conforme necessário, incluindo a imagem
+    const updatedUser = {
+        ...user,
+        ...req.body,
+        user_img: imagem // Aqui você pode obter a imagem do req.body ou do req.files, dependendo de como está sendo enviado o arquivo no form-data
+    };
+
+    // Atualize o usuário no banco de dados
+    router.db.get("users").find({ id }).assign(updatedUser).write();
+
+    res.json(updatedUser);
+});
 
 server.db = router.db
 server.use(router)
