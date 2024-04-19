@@ -27,8 +27,29 @@ $ npm install
 $ npm start
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
-
-# Qualquer imagem que for enviada estará disponível no endpoint
-# http://localhost:3000/static/nomedaimagem.png
 ```
 
+# Login
+> Para realizar login, é preciso usar o endpoint:
+
+```bash
+POST /login
+{
+  "email": "olivier@mail.com",
+  "password": "bestPassw0rd"
+}
+```
+
+# users - POST
+> Para cadastrar os usuários com imagem, utilize pelo menos os campos abaixo, com corpo do tipo form-data:
+```bash
+    {
+      "email": "seuemail@email.com",
+      "password": "suasenha",
+      "user_img": "1713478562094.jpg" 
+    }
+```
+
+# Imagem
+> Qualquer imagem que for enviada estará disponível no endpoint <br>
+http://localhost:3000/static/nomedaimagem.png
