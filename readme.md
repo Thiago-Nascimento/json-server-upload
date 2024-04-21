@@ -40,9 +40,10 @@ POST /login
 }
 ```
 
-# users - POST
+# Users
 > Para cadastrar os usuários com imagem, utilize pelo menos os campos abaixo, com corpo do tipo form-data:
 ```bash
+POST /users
     {
       "email": "seuemail@email.com",
       "password": "suasenha",
