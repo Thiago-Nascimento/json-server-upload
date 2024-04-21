@@ -3,50 +3,114 @@
     {
       "email": "paulo@email.com",
       "password": "$2a$10$Y9nEeY6FPS3q9i7KLO.D4OTKA4CwTxxSLYQDhlBqXDniiNHJypwm2",
-      "id": 1
+      "id": 1,
+      "user_img": "1713478562094.jpg",
+      "visualizacoes": 39,
+      "curtidas": 12,
+      "mensagens": 68
     },
     {
       "email": "paulo2@email.com",
       "password": "$2a$10$uTdFYuOwNZR/nK7fo.JYveum5Kq1ko.C67CoHiL7YjJcO4VVZxUm6",
       "id": 2,
-      "user_img": "1713478562094.jpg"
+      "user_img": "1713478562094.jpg",
+      "visualizacoes": 25,
+      "curtidas": 10,
+      "mensagens": 13
     },
     {
       "email": "paulo3@email.com",
       "password": "$2a$10$F/bdSSNbDyUdAX29MSP1JuvyATH85fENMAbi/lErZNavAtUt2jqkS",
       "id": 3,
-      "user_img": "1713478524301.jpg"
+      "user_img": "1713469735094.png",
+      "visualizacoes": 788,
+      "curtidas": 1001,
+      "mensagens": 7865
     }
   ],
-  "servicos": [
+  "dashboard":{
+    "usuarios_cadastrados": 45879,
+    "usuarios_premium": 1234,
+    "percentual_satisfacao_com_SAC": 74.8,
+    "percentual_turn_over": 18.9
+  },
+  "colaboradores": [
     {
-      "nome": "Desenvolvimento de site institucional - Gateway de Pagamento / Fintech",
-      "valor": "1300,00",
-      "descricao": "Desenvolver um site responsivo que seja utilizado como uma plataforma de apresentação do nosso gateway de pagamento. O objetivo principal deste projeto é criar um site atraente e informativo, que demonstre as funcionalidades e benefícios do nosso gateway de pagamento para potenciais clientes.",
-      "techs": [
-        "HTML",
-        "CSS",
-        "JS"
-      ],
-      "id": 1
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 3,
+      "interesse": "Amizade"
     },
     {
-      "nome": "Bot telegram Pagamento",
-      "valor": "2400,00",
-      "descricao": "Preciso fazer um código em python para um bot do telegram. O bot será para solicitação de pagamento.",
-      "techs": [
-        "PYTHON"
-      ],
-      "id": 2
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 4,
+      "interesse": "Amizade"
     },
     {
-      "nome": "Caixa Rápido",
-      "valor": "1200,00",
-      "descricao": "Preciso fazer um  software que permita ao usuário fazer o upload de seu extrato bancário em formato( ofx). Dentro do software o mesmo poderá categorizar todas as suas receitas e despesas, tendo categorias sugeridas pelo software e permitindo também personalizações. Após o lançamento de vários extratos o software irá entender que são lançamentos parecidos e fará a categorização de maneira automática, cabendo ao usuário somente categorizar as receitas e despesas que não se repetem. Após a categorização o software irá emitir gráficos e relatórios baseados na categorização das contas.",
-      "techs": [
-        "PYTHON"
-      ],
-      "id": 3
-    }
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 8,
+      "interesse": "Amizade"
+    },
+    {
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 9,
+      "interesse": "Amizade"
+    },
+    {
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 1,
+      "interesse": "Amizade"
+    },
+    {
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 5,
+      "interesse": "Amizade"
+    },
+    {
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 2,
+      "interesse": "Amizade"
+    },
+    {
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 6,
+      "interesse": "Amizade"
+    },
+    {
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 7,
+      "interesse": "Amizade"
+    },
+    {
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 7,
+      "interesse": "Amizade"
+    },
+    {
+      "user_img": "1713469735094.png",
+      "nome": "John Doe",
+      "area_atuacao": "Financeiro",
+      "anos_na_Union": 3,
+      "interesse": "Amizade"
+    }    
   ]
 }
