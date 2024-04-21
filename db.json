@@ -24,7 +24,7 @@
       "email": "paulo3@email.com",
       "password": "$2a$10$F/bdSSNbDyUdAX29MSP1JuvyATH85fENMAbi/lErZNavAtUt2jqkS",
       "id": 3,
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "visualizacoes": 788,
       "curtidas": 1001,
       "mensagens": 7865,
@@ -39,81 +39,167 @@
   },
   "colaboradores": [
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 3,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 4,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 8,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 9,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 1,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 5,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 2,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 6,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 7,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 7,
       "interesse": "Amizade"
     },
     {
-      "user_img": "1713469735094.png",
+      "user_img": "1692210998533.jpg",
       "nome": "John Doe",
       "area_atuacao": "Financeiro",
       "anos_na_Union": 3,
       "interesse": "Amizade"
     }    
+  ],
+  "mensagens": [
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Alice",
+      "mensagem": "Oi, como vai?",
+      "tempo_restante_segundos": 300,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Sophia",
+      "mensagem": "Bom dia!",
+      "tempo_restante_segundos": 200,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Gabriel",
+      "mensagem": "Está ocupado agora?",
+      "tempo_restante_segundos": 50,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Mariana",
+      "mensagem": "Ei, você viu isso?",
+      "tempo_restante_segundos": 20,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Lucas",
+      "mensagem": "Estou indo para aí.",
+      "tempo_restante_segundos": 480,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Isabela",
+      "mensagem": "O que você acha disso?",
+      "tempo_restante_segundos": 100,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Rafael",
+      "mensagem": "Vamos sair hoje à noite?",
+      "tempo_restante_segundos": 523,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Carolina",
+      "mensagem": "Tem planos para o final de semana?",
+      "tempo_restante_segundos": 741,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Guilherme",
+      "mensagem": "Como foi seu dia?",
+      "tempo_restante_segundos": 123,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Mateus",
+      "mensagem": "Preciso da sua ajuda.",
+      "tempo_restante_segundos": 300,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Juliana",
+      "mensagem": "Estou animada para o próximo evento!",
+      "tempo_restante_segundos": 300,
+      "visualizado": false
+    },
+    {
+      "user_img": "1692210998533.jpg",
+      "nome": "Fernanda",
+      "mensagem": "Quer conversar?",
+      "tempo_restante_segundos": 300,
+      "visualizado": false
+    }
   ]
 }
