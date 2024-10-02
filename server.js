@@ -14,12 +14,26 @@ const multer = require("multer")
 
 const auth = require("json-server-auth")
 
+// Swagger
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json'); // Arquivo de documentação Swagger
+
+// Swagger middleware
+server.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 const port = 3000;
 let imagem = ""
 
 if (!fs.existsSync(path.join(__dirname, "img"))) {
     fs.mkdirSync(path.join(__dirname, "img"))
 }
+
+// Configurar as regras de autenticação
+// Você pode definir diferentes níveis de acesso para diferentes endpoints aqui.
+const rules = auth.rewriter({
+    // Apenas usuários autenticados podem acessar o endpoint /secure-endpoint
+    "/colaboradores*": "/660/colaboradores",
+  });
 
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -38,7 +52,9 @@ server.use("/static", express.static(path.join(__dirname, "img")))
 server.use(middlewares)
 
 server.use(upload.any())
-
+server.use(rules); // Aplica as regras
+server.use(auth); // Aplica o auth middleware
+server.use(router); // Roteador padrão do json-server
 
 
 server.use((req, res, next) => {

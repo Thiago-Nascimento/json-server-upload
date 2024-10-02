@@ -29,9 +29,14 @@
       "curtidas": 1001,
       "mensagens": 7865,
       "descricao": "Aventureiro urbano 🏙️, amante de arte 🎨 e entusiasta da culinária! 🍜 Sempre em busca de novas inspirações nas ruas da cidade, seja explorando galerias de arte underground ou descobrindo os sabores autênticos de restaurantes étnicos. Adoro compartilhar momentos de risadas genuínas 😄, dançar ao som de músicas animadas 🎶 e me perder em conversas profundas sobre filosofia e vida. Se você é alguém que aprecia a beleza do caos urbano e está pronto para se aventurar por novos horizontes ao meu lado, vamos nos conectar e criar memórias inesquecíveis juntos! 💫🍃"
+    },
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$t/FnXMaS69B0H5Tp6mFCaOO98FztBmQktFuY33uj1MjCIcIvYbL7y",
+      "id": 4
     }
   ],
-  "dashboard":{
+  "dashboard": {
     "usuarios_cadastrados": 45879,
     "usuarios_premium": 1234,
     "percentual_satisfacao_com_SAC": 74.8,
@@ -114,7 +119,7 @@
       "area_atuacao": "Financeiro",
       "anos_na_Union": 3,
       "interesse": "Amizade"
-    }    
+    }
   ],
   "mensagens": [
     {
