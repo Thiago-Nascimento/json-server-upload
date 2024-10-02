@@ -1,0 +1,64 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "JSON Server API",
+      "version": "1.0.0",
+      "description": "Documentação da API para o JSON Server"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000",
+        "description": "Servidor local"
+      }
+    ],
+    "paths": {
+      "/secure-endpoint": {
+        "get": {
+          "summary": "Obter dados do endpoint protegido",
+          "tags": ["Secure"],
+          "responses": {
+            "200": {
+              "description": "Sucesso"
+            },
+            "401": {
+              "description": "Não autorizado"
+            }
+          }
+        }
+      },
+      "/login": {
+        "post": {
+          "summary": "Login do usuário",
+          "tags": ["Auth"],
+          "requestBody": {
+            "description": "Dados de login",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["email", "password"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Login bem-sucedido"
+            },
+            "400": {
+              "description": "Erro de validação"
+            }
+          }
+        }
+      }
+    }
+  }
+  
