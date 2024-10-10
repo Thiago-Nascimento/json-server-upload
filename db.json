@@ -4,7 +4,7 @@
       "email": "paulo@email.com",
       "password": "$2a$10$Y9nEeY6FPS3q9i7KLO.D4OTKA4CwTxxSLYQDhlBqXDniiNHJypwm2",
       "id": 1,
-      "user_img": "1713478562094.jpg"
+      "user_img": "32689830.jpeg"
     }
   ],
   "dashboard": {
@@ -13,46 +13,13 @@
     "percentual_satisfacao_com_SAC": 74.8,
     "percentual_turn_over": 18.9
   },
-  "colaboradores": [
-    {
-      "user_img": "1692210998533.jpg",
-      "nome": "John Doe",
-      "area_atuacao": "Financeiro",
-      "anos_na_Union": 3,
-      "interesse": "Amizade"
-    }
-  ],
   "mensagens": [
     {
-      "user_img": "1692210998533.jpg",
+      "id": "1",
       "nome": "Alice",
       "mensagem": "Oi, como vai?",
       "tempo_restante_segundos": 300,
       "visualizado": false
-    },
-    {
-      "email": "seuemail7@email.com",
-      "password": "1234567891011",
-      "nome": "Paulo",
-      "id": "1"
-    },
-    {
-      "email": "seuemail7@email.com",
-      "password": "1234567891011",
-      "nome": "Paulo",
-      "id": "2"
-    },
-    {
-      "email": "seuemail7@email.com",
-      "password": "1234567891011",
-      "nome": "Paulo",
-      "id": "3"
-    },
-    {
-      "email": "seuemail7@email.com",
-      "password": "1234567891011",
-      "nome": "Paulo",
-      "id": "4"
     }
   ]
 }

@@ -9,7 +9,7 @@ const server        = jsonServer.create()
 const router        = jsonServer.router("db.json")
 const middlewares   = jsonServer.defaults()
 
-// Swagger
+// Documentação Swagger
 const swaggerUi     = require('swagger-ui-express');
 const swaggerDoc    = require('./swagger.json'); // Arquivo de documentação Swagger
 server.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
@@ -31,29 +31,29 @@ let storage = multer.diskStorage({
     }
 })
 
+// Configuração do Multer
 let upload = multer({ storage })
-
 server.use("/static", express.static(path.join(__dirname, "uploads")))
 server.use(middlewares)
 server.use(upload.any())
-server.use(auth); // Aplica o auth middleware
 
 // Você pode definir diferentes níveis de acesso para diferentes endpoints aqui.
 const rules = auth.rewriter({
-    // Apenas usuários autenticados podem acessar o endpoint /secure-endpoint
     "/colaboradores*": "/660/colaboradores",
 });
+server.use(rules); 
 
 server.use((req, res, next) => {
     if (req.originalUrl === "/users") {
+        req.body = {...req.body, arquivo: imagem}
+    }
+    if(imagem !== "") {
         req.body = {...req.body, arquivo: imagem}
     }
     next()
 })
 
 server.put("/users/:id", (req, res, next) => {
-    // Aqui você pode tratar a requisição PUT para atualizar os dados do usuário,
-    // incluindo a imagem, se necessário.
     const id = parseInt(req.params.id);
     const user = router.db.get("users").find({ id }).value();
 
@@ -61,11 +61,10 @@ server.put("/users/:id", (req, res, next) => {
         return res.status(404).send("Usuário não encontrado");
     }
 
-    // Atualize os campos do usuário conforme necessário, incluindo a imagem
     const updatedUser = {
         ...user,
         ...req.body,
-        arquivo: imagem // Aqui você pode obter a imagem do req.body ou do req.files, dependendo de como está sendo enviado o arquivo no form-data
+        arquivo: imagem 
     };
 
     // Atualize o usuário no banco de dados
@@ -74,7 +73,6 @@ server.put("/users/:id", (req, res, next) => {
     res.json(updatedUser);
 });
 
-server.use(rules); 
 server.use(auth); 
 server.db = router.db
 server.use(router)
@@ -82,8 +80,6 @@ server.use(router)
 server.listen(port, () => {
     console.log("\x1b[36m%s\x1b[0m", "JSON Server executando na porta: " + port)
     console.log("\x1b[1m%s\x1b[0m", "\nRecursos disponíveis: \n")
-
     Object.keys(router.db.__wrapped__).forEach( recurso => console.log(`http://localhost:${port}/${recurso}`) )
-
     console.log(`\nhttp://localhost:${port}/static`);
 })
