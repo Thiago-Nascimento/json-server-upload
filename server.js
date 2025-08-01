@@ -1,43 +1,29 @@
-// Endereço da imagem
-// http://localhost:3000/static/[nomedaimagem]
+const jsonServer    = require("json-server")
+const path          = require("path")
+const fs            = require("fs")
+const express       = require("express")
+const multer        = require("multer")
+const auth          = require("json-server-auth")
 
-const jsonServer = require("json-server")
-const server = jsonServer.create()
+const server        = jsonServer.create()
+const router        = jsonServer.router("db.json")
+const middlewares   = jsonServer.defaults()
 
-const router = jsonServer.router("db.json")
-const middlewares = jsonServer.defaults()
-
-const path = require("path")
-const fs = require("fs")
-const express = require("express")
-const multer = require("multer")
-
-const auth = require("json-server-auth")
-
-// Swagger
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json'); // Arquivo de documentação Swagger
-
-// Swagger middleware
-server.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// Documentação Swagger
+const swaggerUi     = require('swagger-ui-express');
+const swaggerDoc    = require('./swagger.json'); // Arquivo de documentação Swagger
+server.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 const port = 3000;
 let imagem = ""
 
-if (!fs.existsSync(path.join(__dirname, "img"))) {
-    fs.mkdirSync(path.join(__dirname, "img"))
+if (!fs.existsSync(path.join(__dirname, "uploads"))) {
+    fs.mkdirSync(path.join(__dirname, "uploads"))
 }
-
-// Configurar as regras de autenticação
-// Você pode definir diferentes níveis de acesso para diferentes endpoints aqui.
-const rules = auth.rewriter({
-    // Apenas usuários autenticados podem acessar o endpoint /secure-endpoint
-    "/colaboradores*": "/660/colaboradores",
-  });
 
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, "img"))
+        cb(null, path.join(__dirname, "uploads"))
     },
     filename: (req, file, cb) => {
         imagem = Date.now() + (path.extname(file.originalname) || ".jpg")
@@ -45,31 +31,29 @@ let storage = multer.diskStorage({
     }
 })
 
+// Configuração do Multer
 let upload = multer({ storage })
-
-server.use("/static", express.static(path.join(__dirname, "img")))
-
+server.use("/static", express.static(path.join(__dirname, "uploads")))
 server.use(middlewares)
-
 server.use(upload.any())
-server.use(rules); // Aplica as regras
-server.use(auth); // Aplica o auth middleware
-server.use(router); // Roteador padrão do json-server
 
+// Você pode definir diferentes níveis de acesso para diferentes endpoints aqui.
+const rules = auth.rewriter({
+    "/colaboradores*": "/660/colaboradores",
+});
+server.use(rules); 
 
 server.use((req, res, next) => {
     if (req.originalUrl === "/users") {
-        req.body = {...req.body, user_img: imagem}
+        req.body = {...req.body, arquivo: imagem}
     }
-
+    if(imagem !== "") {
+        req.body = {...req.body, arquivo: imagem}
+    }
     next()
 })
 
-server.use(auth)
-
 server.put("/users/:id", (req, res, next) => {
-    // Aqui você pode tratar a requisição PUT para atualizar os dados do usuário,
-    // incluindo a imagem, se necessário.
     const id = parseInt(req.params.id);
     const user = router.db.get("users").find({ id }).value();
 
@@ -77,11 +61,10 @@ server.put("/users/:id", (req, res, next) => {
         return res.status(404).send("Usuário não encontrado");
     }
 
-    // Atualize os campos do usuário conforme necessário, incluindo a imagem
     const updatedUser = {
         ...user,
         ...req.body,
-        user_img: imagem // Aqui você pode obter a imagem do req.body ou do req.files, dependendo de como está sendo enviado o arquivo no form-data
+        arquivo: imagem 
     };
 
     // Atualize o usuário no banco de dados
@@ -90,15 +73,13 @@ server.put("/users/:id", (req, res, next) => {
     res.json(updatedUser);
 });
 
+server.use(auth); 
 server.db = router.db
 server.use(router)
 
 server.listen(port, () => {
     console.log("\x1b[36m%s\x1b[0m", "JSON Server executando na porta: " + port)
     console.log("\x1b[1m%s\x1b[0m", "\nRecursos disponíveis: \n")
-
     Object.keys(router.db.__wrapped__).forEach( recurso => console.log(`http://localhost:${port}/${recurso}`) )
-
     console.log(`\nhttp://localhost:${port}/static`);
-
 })
